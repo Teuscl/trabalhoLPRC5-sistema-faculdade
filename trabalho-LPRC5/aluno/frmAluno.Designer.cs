@@ -33,10 +33,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtMatricula = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbCurso = new System.Windows.Forms.ComboBox();
             this.dtpDataIngresso = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -73,6 +73,7 @@
             // 
             this.txtMatricula.Location = new System.Drawing.Point(594, 58);
             this.txtMatricula.Name = "txtMatricula";
+            this.txtMatricula.ReadOnly = true;
             this.txtMatricula.Size = new System.Drawing.Size(163, 20);
             this.txtMatricula.TabIndex = 2;
             // 
@@ -85,12 +86,12 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Matrícula";
             // 
-            // textBox1
+            // txtEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(27, 126);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(539, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtEmail.Location = new System.Drawing.Point(27, 126);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(539, 20);
+            this.txtEmail.TabIndex = 4;
             // 
             // label3
             // 
@@ -110,13 +111,13 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Curso";
             // 
-            // comboBox1
+            // cbCurso
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(594, 125);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(163, 21);
-            this.comboBox1.TabIndex = 8;
+            this.cbCurso.FormattingEnabled = true;
+            this.cbCurso.Location = new System.Drawing.Point(594, 125);
+            this.cbCurso.Name = "cbCurso";
+            this.cbCurso.Size = new System.Drawing.Size(163, 21);
+            this.cbCurso.TabIndex = 8;
             // 
             // dtpDataIngresso
             // 
@@ -153,6 +154,7 @@
             this.dtpDataNasc.Name = "dtpDataNasc";
             this.dtpDataNasc.Size = new System.Drawing.Size(200, 20);
             this.dtpDataNasc.TabIndex = 12;
+            this.dtpDataNasc.UseWaitCursor = true;
             // 
             // txtCidade
             // 
@@ -221,28 +223,30 @@
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(148, 360);
+            this.btnConfirmar.Location = new System.Drawing.Point(148, 306);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(218, 23);
             this.btnConfirmar.TabIndex = 22;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(407, 360);
+            this.btnCancelar.Location = new System.Drawing.Point(407, 306);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(218, 23);
             this.btnCancelar.TabIndex = 23;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // frmAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(801, 432);
+            this.ClientSize = new System.Drawing.Size(783, 348);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.label10);
@@ -257,19 +261,22 @@
             this.Controls.Add(this.dtpDataNasc);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dtpDataIngresso);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbCurso);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtMatricula);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAluno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aluno";
+            this.Load += new System.EventHandler(this.frmAluno_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,10 +288,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMatricula;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbCurso;
         private System.Windows.Forms.DateTimePicker dtpDataIngresso;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;

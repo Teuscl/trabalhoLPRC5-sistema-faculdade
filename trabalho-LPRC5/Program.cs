@@ -16,7 +16,7 @@ namespace trabalho_LPRC5
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAluno());
+            Application.Run(new frmMenuPrincipal());
         }
     }
 }

@@ -44,7 +44,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtCEP = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.cbIdDepartamento = new System.Windows.Forms.ComboBox();
+            this.cbDepartamento = new System.Windows.Forms.ComboBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -110,6 +110,7 @@
             // 
             this.txtRegistro.Location = new System.Drawing.Point(599, 52);
             this.txtRegistro.Name = "txtRegistro";
+            this.txtRegistro.ReadOnly = true;
             this.txtRegistro.Size = new System.Drawing.Size(124, 20);
             this.txtRegistro.TabIndex = 7;
             // 
@@ -134,9 +135,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(596, 97);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 13);
+            this.label5.Size = new System.Drawing.Size(74, 13);
             this.label5.TabIndex = 10;
-            this.label5.Text = "ID Departamento";
+            this.label5.Text = "Departamento";
             // 
             // txtCidade
             // 
@@ -160,6 +161,7 @@
             this.txtCEP.Name = "txtCEP";
             this.txtCEP.Size = new System.Drawing.Size(168, 20);
             this.txtCEP.TabIndex = 15;
+            this.txtCEP.Leave += new System.EventHandler(this.txtCEP_Leave);
             // 
             // label7
             // 
@@ -170,40 +172,43 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "CEP";
             // 
-            // cbIdDepartamento
+            // cbDepartamento
             // 
-            this.cbIdDepartamento.FormattingEnabled = true;
-            this.cbIdDepartamento.Location = new System.Drawing.Point(599, 113);
-            this.cbIdDepartamento.Name = "cbIdDepartamento";
-            this.cbIdDepartamento.Size = new System.Drawing.Size(124, 21);
-            this.cbIdDepartamento.TabIndex = 16;
+            this.cbDepartamento.FormattingEnabled = true;
+            this.cbDepartamento.Location = new System.Drawing.Point(599, 113);
+            this.cbDepartamento.Name = "cbDepartamento";
+            this.cbDepartamento.Size = new System.Drawing.Size(124, 21);
+            this.cbDepartamento.TabIndex = 16;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(424, 341);
+            this.btnCancelar.Location = new System.Drawing.Point(382, 275);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(218, 23);
             this.btnCancelar.TabIndex = 25;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(167, 341);
+            this.btnConfirmar.Location = new System.Drawing.Point(148, 275);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(218, 23);
             this.btnConfirmar.TabIndex = 24;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // frmProfessor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(789, 413);
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClientSize = new System.Drawing.Size(754, 323);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnConfirmar);
-            this.Controls.Add(this.cbIdDepartamento);
+            this.Controls.Add(this.cbDepartamento);
             this.Controls.Add(this.txtCEP);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtCidade);
@@ -221,9 +226,12 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmProfessor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Professor";
+            this.Load += new System.EventHandler(this.frmProfessor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,7 +254,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCEP;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cbIdDepartamento;
+        private System.Windows.Forms.ComboBox cbDepartamento;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnConfirmar;
     }

@@ -55,60 +55,132 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAluno.cs">
+    <Compile Include="aluno\frmAluno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAluno.Designer.cs">
+    <Compile Include="aluno\frmAluno.Designer.cs">
       <DependentUpon>frmAluno.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCurso.cs">
+    <Compile Include="curso\frmCurso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCurso.Designer.cs">
+    <Compile Include="curso\frmCurso.Designer.cs">
       <DependentUpon>frmCurso.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDepartamento.cs">
+    <Compile Include="departamento\frmDepartamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDepartamento.Designer.cs">
+    <Compile Include="departamento\frmDepartamento.Designer.cs">
       <DependentUpon>frmDepartamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDisciplina.cs">
+    <Compile Include="disciplina\frmDisciplina.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDisciplina.Designer.cs">
+    <Compile Include="disciplina\frmDisciplina.Designer.cs">
       <DependentUpon>frmDisciplina.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProfessor.cs">
+    <Compile Include="curso\frmMenuCurso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProfessor.Designer.cs">
+    <Compile Include="curso\frmMenuCurso.Designer.cs">
+      <DependentUpon>frmMenuCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="departamento\frmMenuDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="departamento\frmMenuDepartamento.Designer.cs">
+      <DependentUpon>frmMenuDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="disciplina\frmMenuDisciplina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="disciplina\frmMenuDisciplina.Designer.cs">
+      <DependentUpon>frmMenuDisciplina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuPrincipal.Designer.cs">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="aluno\frmMenuAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aluno\frmMenuAluno.Designer.cs">
+      <DependentUpon>frmMenuAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="professor\frmMenuProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="professor\frmMenuProfessor.Designer.cs">
+      <DependentUpon>frmMenuProfessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="turma\frmAlunoTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="turma\frmAlunoTurma.Designer.cs">
+      <DependentUpon>frmAlunoTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="turma\frmMenuTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="turma\frmMenuTurma.Designer.cs">
+      <DependentUpon>frmMenuTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="professor\frmProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="professor\frmProfessor.Designer.cs">
       <DependentUpon>frmProfessor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTurma.cs">
+    <Compile Include="turma\frmTurma.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTurma.Designer.cs">
+    <Compile Include="turma\frmTurma.Designer.cs">
       <DependentUpon>frmTurma.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmAluno.resx">
+    <EmbeddedResource Include="aluno\frmAluno.resx">
       <DependentUpon>frmAluno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCurso.resx">
+    <EmbeddedResource Include="curso\frmCurso.resx">
       <DependentUpon>frmCurso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDepartamento.resx">
+    <EmbeddedResource Include="departamento\frmDepartamento.resx">
       <DependentUpon>frmDepartamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDisciplina.resx">
+    <EmbeddedResource Include="disciplina\frmDisciplina.resx">
       <DependentUpon>frmDisciplina.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmProfessor.resx">
+    <EmbeddedResource Include="curso\frmMenuCurso.resx">
+      <DependentUpon>frmMenuCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="departamento\frmMenuDepartamento.resx">
+      <DependentUpon>frmMenuDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="disciplina\frmMenuDisciplina.resx">
+      <DependentUpon>frmMenuDisciplina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuPrincipal.resx">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aluno\frmMenuAluno.resx">
+      <DependentUpon>frmMenuAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\frmMenuProfessor.resx">
+      <DependentUpon>frmMenuProfessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="turma\frmAlunoTurma.resx">
+      <DependentUpon>frmAlunoTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="turma\frmMenuTurma.resx">
+      <DependentUpon>frmMenuTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="professor\frmProfessor.resx">
       <DependentUpon>frmProfessor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTurma.resx">
+    <EmbeddedResource Include="turma\frmTurma.resx">
       <DependentUpon>frmTurma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
